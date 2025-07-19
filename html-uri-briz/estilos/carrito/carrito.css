@@ -1,0 +1,177 @@
+#carrito {
+    overflow-x: auto;
+}
+
+#carrito table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    white-space: nowrap; 
+}
+
+#carrito table img {
+    width: 70px;
+    border-radius: 5px;
+    height: auto; 
+    object-fit: contain; 
+}
+
+#carrito table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#carrito table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#carrito table td:nth-child(3) { 
+    width: 250px;
+    text-align: center;
+}
+
+#carrito table td:nth-child(4), 
+#carrito table td:nth-child(5), 
+#carrito table td:nth-child(6) { 
+    width: 150px;
+    text-align: center;
+}
+
+#carrito table td:nth-child(5) input {
+    width: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#carrito table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#carrito table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#carrito table tbody tr td {
+    padding-top: 15px;
+}
+
+#carrito table tbody td {
+    font-size: 13px;
+}
+
+
+.btn-eliminar { 
+    background-color: transparent;
+    border: 1px solid #dc3545; 
+    color: #dc3545;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+#agregar-al-carrito { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#cupon, 
+#subtotal {
+    width: 48%;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#cupon h3,
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+
+#cupon input {
+    width: 60%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #e2e9e1;
+    margin-right: 10px;
+}
+
+#cupon button.normal {
+    background-color: #088178;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td {
+    padding: 10px 0;
+    border: 1px solid #e2e9e1;
+    padding-left: 10px;
+}
+
+#subtotal table tr:last-child td {
+    font-weight: bold;
+}
+
+#subtotal button.normal {
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    font-size: 1rem;
+}
+
+
+
+@media (max-width: 799px) {
+    #agregar-al-carrito {
+        flex-direction: column;
+    }
+
+    #cupon,
+    #subtotal {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 477px) {
+    #carrito table td:nth-child(1) { width: 60px; }
+    #carrito table td:nth-child(2) { width: 80px; }
+    #carrito table td:nth-child(3) { width: 150px; }
+    #carrito table td:nth-child(4) { width: 80px; }
+    #carrito table td:nth-child(5) { width: 70px; }
+    #carrito table td:nth-child(6) { width: 80px; }
+    #carrito table td:nth-child(5) input { width: 40px; }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu Tienda Online</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="./estilos/index/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="index.html">
+            <img src="./imagenes/logo2.png" class="logo" alt="Logo TechStore" width="40px" height="40px">
+        </a>
+        <div>
+            <ul id="barra-navegacion" class="barra-navegacion">
+                <li><a class="activo" href="index.html">Inicio</a></li>
+                <li><a href="pages/tienda.html">Tienda</a></li>
+                <li><a href="pages/blog.html">Blog</a></li>
+                <li><a href="pages/acerca.html">Acerca de</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li>
+                    <a href="pages/carrito.html">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="#iniciar-sesion-modal" class="btn-accion-usuario" id="mostrar-iniciar-sesion-nav">Iniciar Sesión</a></li>
+                <li><a href="#registro-modal" class="btn-accion-usuario" id="mostrar-registro-nav">Registrarse</a></li>
+                <a href="#" id="cerrar-menu" class="cerrar-menu">
+                    <i class="far fa-times" aria-hidden="true"></i>
+                </a>
+            </ul>
+        </div>
+        <div class="movil">
+            <a href="pages/carrito.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </a>
+            <i id="barra-menu" class="fas fa-outdent "></i>
+        </div>
+    </header>
+    <main>
+        <section class="heroe seccion-p1">
+            <div class="contenido-heroe">
+                <h4>¡Hacé el cambio que necesitás!</h4>
+                <h2>Súper ofertas</h2>
+                <h1>En todos los productos</h1>
+                <p>¡Aprovechá cupones y descuentos de hasta el 70%!</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+        <section class="seccion-productos seccion-p1">
+            <h2>Productos Destacados</h2>
+            <p>Las mejores ofertas</p>
+            <div class="contenedor-productos" id="contenedor-productos-destacados">
+                <p>Cargando productos...</p>
+            </div>
+        </section>
+        <section class="boletin seccion-p1 seccion-m1">
+            <div class="texto-boletin">
+                <p>Recibí novedades de nuestra tienda y <span>ofertas exclusivas</span></p>
+            </div>
+            <div class="formulario">
+                <input type="text" placeholder="Tu correo electrónico">
+                <button>Suscribirme</button>
+            </div>
+        </section>
+    </main>
+    <footer class="seccion-p1">
+        <div class="columna">
+            <h4>Contacto</h4>
+            <p><strong>Dirección:</strong> Av. Siempreviva </p>
+            <p><strong>Teléfono:</strong> +54897789879897</p>
+            <p><strong>Horario:</strong> 9:00 - 18:00, Lunes a Viernes</p>
+            <div class="seguir">
+                <h4>Seguinos</h4>
+                <div class="icono">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="columna">
+            <h4>Mi Cuenta</h4>
+            <a href="#iniciar-sesion-modal" class="btn-accion-usuario">Iniciar Sesión</a>
+            <a href="pages/carrito.html">Ver Carrito</a>
+            <a href="#">Mis Favoritos</a>
+            <a href="#">Seguimiento de Pedido</a>
+            <a href="#">Ayuda</a>
+        </div>
+        <div class="derechos-reservados">
+            <p>© uriel</p>
+        </div>
+    </footer>
+
+    <div id="iniciar-sesion-modal" class="modal">
+        <div class="contenido-modal">
+            <span class="btn-cerrar-modal">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form class="formulario-autenticacion">
+                <div class="grupo-formulario">
+                    <label for="email-iniciar-sesion">Correo Electrónico:</label>
+                    <input type="email" id="email-iniciar-sesion" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="contrasena-iniciar-sesion">Contraseña:</label>
+                    <input type="password" id="contrasena-iniciar-sesion" required>
+                </div>
+                <button type="submit">Entrar</button>
+                <p>¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
+                <p>¿No tienes cuenta? <a href="#" id="mostrar-registro-desde-inicio-sesion">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="registro-modal" class="modal">
+        <div class="contenido-modal">
+            <span class="btn-cerrar-modal">&times;</span>
+            <h2>Registrarse</h2>
+            <form class="formulario-autenticacion">
+                <div class="grupo-formulario">
+                    <label for="nombre-registro">Nombre:</label>
+                    <input type="text" id="nombre-registro" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="email-registro">Correo Electrónico:</label>
+                    <input type="email" id="email-registro" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="contrasena-registro">Contraseña:</label>
+                    <input type="password" id="contrasena-registro" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="confirmar-contrasena-registro">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmar-contrasena-registro" required>
+                </div>
+                <button type="submit">Crear Cuenta</button>
+                <p>¿Ya tienes cuenta? <a href="#" id="mostrar-inicio-sesion-desde-registro">Inicia Sesión aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
